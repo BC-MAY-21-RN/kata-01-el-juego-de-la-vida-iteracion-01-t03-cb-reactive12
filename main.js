@@ -19,13 +19,24 @@ gen2
 cuadros('........\n....*...\n...**...\n........')
 
 function formato_iteracion(entrada_O_X){
-    let impresion = ""
-    if (entrada_O_X == ""){
-        impresion = "."
-    } else if (entrada_O_X == "1"){
-        impresion = "*"
+
+    let posVida = []
+    for (let i = 0; i < entrada_O_X.length ; i++){   
+
+        
+        if (entrada_O_X == "."){
+           
+        } else if (entrada_O_X[i] == '*'){
+            
+            console.log(i)
+        }     
+    
+        
+
     }
-    return impresion
+
+    
+    
 }
 
 function cuadros (entrada){
@@ -33,50 +44,29 @@ function cuadros (entrada){
     let arreglo = numeros.split('')
     console.log(arreglo)
 
+
+    let arr1 = []
+    let arr2 = []
+    let arr3 = []
+    let arr4 = []
+
     let impresion = "" 
 
     // Iteracion 1:
     for (let i = 0; i < 8; i++){   
-
-        if (i < arreglo.length-1){
-            impresion = impresion + formato_iteracion_1(arreglo[i])         
-        } else if(i = arreglo.length-1){
-            impresion = impresion + formato_iteracion_1(arreglo[i])+"\n"         
-        }
-
+            arr1.push(arreglo[i])       
     }
-    // Iteracion 2:
-    for (let i = 9; i < 17; i++){   
-
-        if (i < arreglo.length-1){
-            impresion = impresion + formato_iteracion_2(arreglo[i])         
-        } else if(i = arreglo.length-1){
-            impresion = impresion + formato_iteracion_2(arreglo[i])+"\n"
-        }
-
+    for (let i = 9; i < 17; i++){    
+        arr2.push(arreglo[i])       
     }
-    // Iteracion 3:
-    for (let i = 18; i < 26; i++){   
-
-        if (i < arreglo.length-1){
-            impresion = impresion + formato_iteracion_3(arreglo[i])         
-        } else if(i = arreglo.length-1){
-            impresion = impresion + formato_iteracion_3(arreglo[i])+"\n"           
-            console.log(impresion)
-        }
-
+    for (let i = 18; i < 26; i++){     
+        arr3.push(arreglo[i])       
     }
-    // Iteracion 4:
-    for (let i = 27; i <=34; i++){   
-
-        if (i < arreglo.length-1){
-            impresion = impresion + formato_iteracion_4(arreglo[i])         
-        } else if(i = arreglo.length-1){
-            impresion = impresion + formato_iteracion_4(arreglo[i])+"\n"           
-            console.log(impresion)
-        }
-
-    }
+    
+    formato_iteracion(arr1)
+    formato_iteracion(arr2)
+    formato_iteracion(arr3)
+    
 }
 
 
